@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        input{
+            display: block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Seance 8+9 Form</h1>
+</header>
+<nav>
+    <a href="home.html" class="menu">Accueil</a>
+    <a href="image.html" class="menu">Image</a>
+    <a href="table.html" class="menu">Table</a>
+    <a href="form.html" class="menu">Formulaire</a>
+</nav>
+<main>
+    <h2>Formulaire</h2>
+    <form action="" method="get">
+            <!--action="" => URL de destination du FORM-->
+        <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="inputPrenom" aria-placeholder="Écrire votre prénom" maxlength="25" aria-required/>
+             <!--<TESTER aria-placeholser   vs   placeholder  simple-->
+        <label for="courriel">Courriel</label>
+            <input type="email" id="courriel" name="inputCourriel"/>
+        <label>Phone <input type="text" name="inputPhone"></label>
+        <label>Mot de passe <input type="password" name="inputPass"></label>
+        <label>Naissance<input type="date" name="inputDate"></label>
+                    <!--INPUT   type="date" ne fonctionne pas dans Explorer-->
+                    <!-- à la fin de la ligne 1° pour bloquer une valeur déjà présente :  readondly / 2° pour désactiver la variable : disabled -->
+        <label>Age<input type="number" name="inputAge"></label>
+        <label for="selectCity">Ville</label>
+        <select name="selctVille"  id="selectCity" required></select>
+                <option value=""> Choisir la ville</option>
+                <option value="1">Ville A </option>
+                <option value="2">Ville B </option>
+                <option value="3">Ville C </option>
+             </select>
+
+        <fieldset>
+            <legend>Languages de programmation</legend>
+            HTML <input type="checkbox" name="checkHTML" value="1">
+            CSS <input type="checkbox" ame="checkCSS" value="1">
+            JS <input type="checkbox" ame="checkJS"value="1" >
+                    <!--<dans type="checkbox"  value="1" par défaut  = VRAI POUR case COCHÉE-->
+        </fieldset>
+        <fieldset> <legend>Question : Il fait froid?</legend>
+        OUI <input type="radio"name="radioQ1" value="1"> NON<input type="radio" name="radioQ1" value="0"> Pas vraimemt<input type="radio" name="radioQ1" value="2">
+        </fieldset>
+        <fieldset>
+            <legend>Commentaires texte</legend>
+            <textarea name="textCommentaires"  placeholder="Écrire vos commentaires ici" id="" cols="60" rows="10"><textarea></textarea>
+        </fieldset>
+        <input type="submit" value="Sauvegarder">
+            <!--<button>Save</button>-->
+    </form>
+</main>
+<footer>
+    tous les droits reserves
+</footer>
+</body>
+</html>
